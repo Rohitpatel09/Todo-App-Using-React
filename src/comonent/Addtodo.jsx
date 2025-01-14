@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import { BiSolidAddToQueue } from "react-icons/bi";
 function AddTodo({handleNewItem}){
-const [todoName,setName]=useState();
-const [todoDate,setDate]=useState();
+const [todoName,setName]=useState("");
+const [todoDate,setDate]=useState("");
 
 let handleNameChange=(event)=>{
   setName(event.target.value);
@@ -31,7 +31,7 @@ let handleAddButton=()=>{
     </div>
 
     <div className="col-2">
-      <button className="btn btn-success kg-button" onClick={handleAddButton}>Add</button>
+      <button className="btn btn-success kg-button" onClick={handleAddButton}><BiSolidAddToQueue /></button>
     </div>
 
   </div>
